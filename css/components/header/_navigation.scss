@@ -1,0 +1,111 @@
+#header {
+  @include flex(column, center, null);
+  height: 100vh;
+}
+
+.header-nav {
+  @include trans(.2s);
+  position: fixed;
+  background-color: $color3-blur;
+  padding: .6rem 0; 
+  width: 100%;
+  z-index: 10;
+
+  &>.wrap {
+    @include flex(row, center, space-between);
+  }
+
+  &:hover {
+    background-color: $color3;
+    @include trans(.2s);
+  }
+
+  &.wrap {
+    padding: 5px;
+  }
+
+  .logo { 
+    @include flex(row, center, space-between);
+    font-size: $font-size * 2;
+    user-select: none;
+
+    #logo {
+      font-family: $font-logo;
+      font-style: italic;
+    }
+
+    #collaspe-btn {
+      display: none;
+      color: $color1;
+      font-weight: bold;
+
+      @include breakpoint(tablet) {
+        display: block;
+      }
+    }
+  }
+
+    // nav list and search
+  nav {
+    @include flex(row, center, space-between);
+    z-index: 100;
+  }
+
+    // responsive
+  @include breakpoint(tablet) {
+    background-color: #fff;
+    padding: 0;
+
+    &>.wrap {
+      @include flex(column, center, space-between);
+    }
+
+    .logo {
+      width: 100%;
+
+      &>* {
+        transform: scale(.8);
+      }
+    }
+
+    nav {
+      @include flex(column, center, center);
+      @include trans(.2s);
+      width: 100%;
+      opacity: 1;
+    }
+
+    .hide {
+      @include trans(.2s);
+      display: none;
+      overflow: hidden;
+      opacity: 0;
+
+      * {
+        display: none;
+      }
+    }
+  }
+}
+
+.header-nav-list {
+  @include flex(row, center, center);
+  @include breakpoint(tablet) {
+    @include flex(column, center, center);
+    position: relative;
+    height: auto;
+    order: 2;
+
+    &, li {
+      width: 100%;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 10px 25px;
+    color: $color1;
+    font-size: $font-size;
+    text-align: center;
+  }
+}

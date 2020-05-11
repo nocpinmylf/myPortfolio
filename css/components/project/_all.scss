@@ -1,0 +1,70 @@
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "pro1 pro2 pro2" "pro3 pro4 pro5";
+  gap: 15px;
+  overflow: hidden;
+  justify-content: center;
+  height: 500px;
+
+  &-1 {
+    grid-area: pro1;
+  }
+  &-2 {
+    grid-area: pro2;
+  }
+  &-3 {
+    grid-area: pro3;
+  }
+  &-4 {
+    grid-area: pro4;
+  }
+  &-5 {
+    grid-area: pro5;
+  }
+
+  &>div {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  a {
+    @include flex(null, center, center);
+    width: 100%;
+    height: 100%;
+    letter-spacing: 3px;
+    font-size: 1.5rem;
+    font-family: $font;
+    color: $color3;
+    background-color: $color2-blur;
+    opacity: 0;
+    @include trans(.2s);
+
+    &:hover {
+      opacity: 1;
+      letter-spacing: 1px;
+    }
+
+    @include breakpoint(tablet) {
+      opacity: 1;
+      font-size: 1rem;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 150px);
+    gap: 10px;
+    grid-template-areas: "pro1" "pro2" "pro3" "pro4" "pro5";
+    height: auto;
+  }
+}
+
+.more {
+  padding: 10px 20px;
+  color: $color3;
+  background-color: $color1;
+  display: table;
+  margin: 1rem auto;
+}

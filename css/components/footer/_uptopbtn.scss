@@ -1,0 +1,25 @@
+.up-btn {
+
+  &.line {
+    border-bottom: 1px solid $color3-blur;
+    height: 21px;
+    margin-bottom: 22px;
+  }
+
+  &>a {
+  @include trans(.2s);
+  background-color: $color3;
+  color: $color1;
+  text-align: center;
+  display: table;
+  padding: 10px 20px;
+  margin: 1rem auto 0;
+  clear: both;
+
+    &:hover {
+      background-color: $color1;
+      color: $color3;
+      border: 1px solid $color3;
+    }
+  }
+}

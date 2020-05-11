@@ -1,0 +1,21 @@
+@keyframes appear {
+  0% {
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes updownCaret {
+  0% {
+    opacity: .5;
+    top: 93%;
+  }
+  100% {
+    opacity: 1;
+    top: 95%;
+  }
+}

@@ -1,0 +1,91 @@
+.banner {
+  overflow: hidden;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+  }
+
+  .ani {
+    color: #1e405c;
+    font-weight: bold;
+    animation: appear 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  }
+
+  .more {
+    @include abCenter(95%, 50%);
+    content: "";
+    font-size: 60px;
+    padding: 0 20px;
+    color: $color1;
+    background: transparent;
+    animation: updownCaret .8s linear infinite;
+
+    @include breakpoint(small) {
+      font-size: 30px;
+      padding: 0 15px;
+    }
+  }
+}
+
+.banner-slogan {
+  @include abCenter(50%, 20%);
+  padding: 2rem;
+
+  &-btn-group {
+    @include flex(row, center, space-between);
+    width: 100%;
+  }
+
+  &-btn {
+    display: block;
+    width: 40%;
+    padding: 15px 30px;
+    margin: 1rem;
+    text-align: center;
+    background-color: $color1;
+    color: $color3;
+    user-select: none;
+  }
+
+  &-txt {
+    margin-bottom: 35px;
+    font-weight: bold;
+    font-size: $font-size * 2.5;
+    text-align: center;
+    color: $color2;
+    text-transform: uppercase;
+
+    &.smaller {
+      font-weight: normal;
+      text-transform: capitalize;
+      font-size: 20px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    @include abCenter(50%, 50%);
+    width: 100%;
+
+    &-txt {
+      font-size: $font-size * 2;
+  
+      &.smaller {
+        font-size: $font-size;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    &-btn-group {
+      @include flex(column, center, space-between);
+    }
+
+    &-btn {
+      width: 100%;
+    }
+  }
+}

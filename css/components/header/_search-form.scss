@@ -1,0 +1,24 @@
+.search-form {
+  margin-left: 10px;
+  order: 1;
+  position: relative;
+
+  .fa-search {
+    color: $color1;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+#search-txt {
+  border: 0;
+  color: $color1-blur;
+  background-color: transparent;
+  padding: 5px 5px 5px 30px;
+  border-bottom: 1px solid $color1-blur;
+
+  &:focus {
+    border-bottom: 2px solid $color1;
+  }
+}
