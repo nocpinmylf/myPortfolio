@@ -1,0 +1,67 @@
+.about-me {
+  @include flex(row, null, center);
+
+  .intro {
+    width: 50%;
+    padding: 0 15px;   
+
+    p {
+      font-size: 20px;
+      width: 100%;
+      color: $color3;
+      display: block;
+      padding: 15px 10px;
+      margin: 15px 0;
+    }
+
+    .services {
+      @include flex(column, null, space-between);
+
+      svg {
+        margin-right: 8px;
+      }
+
+      &-01 {
+        background-color: #ac291d;
+      }
+
+      &-02 {
+        background-color: #1d78ac;
+      }
+
+      &-03 {
+        background-color: #9ebc1a;
+      }
+
+      &-04 {
+        background-color: #cd6799;
+      }
+    }
+  }
+
+  .skill {
+    @include flex(column, null, space-between);
+    width: 50%;
+
+    .col1,
+    .col2 {
+      @include flex(row, null, center);
+    }
+  }
+
+  @include breakpoint(tablet) {
+    @include flex(column, center, center);
+
+    .intro,
+    .skill {
+      width: 100%;
+    }
+
+    .intro {
+      
+      p {
+        font-size: $font-size;
+      }
+    }
+  }
+}
