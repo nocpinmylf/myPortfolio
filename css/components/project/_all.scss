@@ -10,6 +10,12 @@
 
   &-1 {
     grid-area: pro1;
+    background: url(../res/img/pc-accessories.png) no-repeat center/ 150%;
+    transition: .2s;
+
+    &:hover {
+      background-size: 160%;
+    }
   }
   &-2 {
     grid-area: pro2;
