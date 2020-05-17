@@ -1,3 +1,12 @@
+@mixin background {
+  background: no-repeat center/ 150%;
+    transition: .2s;
+
+  &:hover {
+    background-size: 160%;
+  }
+}
+
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -10,24 +19,28 @@
 
   &-1 {
     grid-area: pro1;
-    background: url(../res/img/pc-accessories.png) no-repeat center/ 150%;
-    transition: .2s;
-
-    &:hover {
-      background-size: 160%;
-    }
+    @include background;
+    background-image: url(../res/img/cake.png);
   }
   &-2 {
     grid-area: pro2;
+    @include background;
+    background-image: url(../res/img/pc-accessories.png);
   }
+
   &-3 {
     grid-area: pro3;
+    @include background;
   }
+
   &-4 {
     grid-area: pro4;
+    @include background;
   }
+
   &-5 {
     grid-area: pro5;
+    @include background;
   }
 
   &>div {

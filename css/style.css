@@ -1211,9 +1211,10 @@ section {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: pro1;
-  background: url(../res/img/pc-accessories.png) no-repeat center/150%;
+  background: no-repeat center/ 150%;
   -webkit-transition: .2s;
   transition: .2s;
+  background-image: url(../res/img/cake.png);
 }
 
 .project-1:hover {
@@ -1225,24 +1226,53 @@ section {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: pro2;
+  background: no-repeat center/ 150%;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-image: url(../res/img/pc-accessories.png);
+}
+
+.project-2:hover {
+  background-size: 160%;
 }
 
 .project-3 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: pro3;
+  background: no-repeat center/ 150%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.project-3:hover {
+  background-size: 160%;
 }
 
 .project-4 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: pro4;
+  background: no-repeat center/ 150%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.project-4:hover {
+  background-size: 160%;
 }
 
 .project-5 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: pro5;
+  background: no-repeat center/ 150%;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.project-5:hover {
+  background-size: 160%;
 }
 
 .project > div {
