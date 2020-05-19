@@ -31,6 +31,7 @@
   &-3 {
     grid-area: pro3;
     @include background;
+    background-image: url(../res/img/res.png);
   }
 
   &-4 {

@@ -1243,6 +1243,7 @@ section {
   background: no-repeat center/ 150%;
   -webkit-transition: .2s;
   transition: .2s;
+  background-image: url(../res/img/res.png);
 }
 
 .project-3:hover {
